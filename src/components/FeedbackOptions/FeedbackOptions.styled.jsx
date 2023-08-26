@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { colorByOptions } from 'components/utils/colorByOptions';
 
 export const ListButtons = styled.ul`
   margin-top: 20px;
@@ -7,18 +8,7 @@ export const ListButtons = styled.ul`
 `;
 
 export const Button = styled.button`
-  background-color: ${({ option }) => {
-    switch (option) {
-      case 'good':
-        return 'lightgreen';
-      case 'neutral':
-        return 'lightyellow';
-      case 'bad':
-        return 'pink';
-      default:
-        return 'white';
-    }
-  }};
+  background-color: ${({ option }) => colorByOptions(option)};
   font-size: 18px;
   padding: 8px;
   border: 1px solid grey;
